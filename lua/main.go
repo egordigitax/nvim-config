@@ -17,5 +17,6 @@ func styop() {
 		Mama: "asd",
 	}
 
+
     fmt.Println(fb)
 }
