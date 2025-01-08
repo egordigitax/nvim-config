@@ -14,7 +14,10 @@ vim.keymap.set("t", "<ESC>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = t
 -- Coc Binds
 vim.keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
 vim.keymap.set("n", "gr", "<Plug>(coc-references)", {silent = true})
+vim.keymap.set("n", "<leader>a", "<Plug>(coc-codeaction-cursor)", {silent = true})
+vim.keymap.set("n", "<leader>i", "<Plug>(coc-implementation)", {silent = true})
 vim.keymap.set("n", "<leader>r", "<Plug>(coc-refactor)", {silent = true})
+
 -- Unbind Comment Block
 vim.api.nvim_del_keymap('n', 'gbc')
 vim.api.nvim_set_keymap('n', 'gb', '<C-o>', { noremap = true, silent = true })
