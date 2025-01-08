@@ -8,6 +8,8 @@ vim.keymap.set("n", "ff", ":call CocActionAsync('format')<CR>", { noremap = true
 vim.keymap.set("n", "fl", "<cmd>Oil<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "tm", ":Themery<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tm", ":Telescope colorscheme<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "ca", ":ToggleTerm<CR>", { noremap = true, silent = true })
+vim.keymap.set("t", "<ESC>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
 -- Coc Binds
 vim.keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
