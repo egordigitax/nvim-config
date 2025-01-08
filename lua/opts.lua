@@ -11,6 +11,10 @@ vim.keymap.set("n", "<leader>tm", ":Telescope colorscheme<CR>", { noremap = true
 vim.keymap.set("n", "ca", ":ToggleTerm<CR>", { noremap = true, silent = true })
 vim.keymap.set("t", "<ESC>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
+-- GPT
+vim.keymap.set("n", "gg", "<cmd>ChatGPT<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "ge", "<cmd>ChatGPTEditWithInstruction<CR>", { noremap = true, silent = true })
+
 -- Coc Binds
 vim.keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
 vim.keymap.set("n", "gr", "<Plug>(coc-references)", {silent = true})
