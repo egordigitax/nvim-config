@@ -10,6 +10,12 @@ vim.keymap.set("n", "tm", ":Themery<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tm", ":Telescope colorscheme<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "ca", ":ToggleTerm<CR>", { noremap = true, silent = true })
 vim.keymap.set("t", "<ESC>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>d", "<cmd>Neotree toggle<CR>", { noremap = true, silent = true })
+
+-- Panels switch
+vim.api.nvim_set_keymap('n', '<Leader><Tab>', '<C-w>w', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>s', '<cmd>vsplit<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>h', '<cmd>split<CR>', { noremap = true, silent = true })
 
 -- GPT
 vim.keymap.set("n", "gg", "<cmd>ChatGPT<CR>", { noremap = true, silent = true })
@@ -24,6 +30,7 @@ vim.keymap.set("n", "<leader>r", "<Plug>(coc-refactor)", {silent = true})
 
 -- Unbind Comment Block
 vim.api.nvim_del_keymap('n', 'gbc')
+-- Bind Go Back to gb
 vim.api.nvim_set_keymap('n', 'gb', '<C-o>', { noremap = true, silent = true })
 
 -- Set tab width and use spaces instead of tabs
@@ -44,6 +51,7 @@ vim.api.nvim_create_autocmd("FocusLost", {
   pattern = "*",
   command = "silent! wa",
 })
+
 -- Line numbers
 vim.o.number = true
 
