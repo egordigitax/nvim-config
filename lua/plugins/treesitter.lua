@@ -1,32 +1,32 @@
 return {
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate", -- Keeps parsers updated
-  opts = {
-    ensure_installed = {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function () 
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+          ensure_installed = {
       -- Scripting languages
       "bash", "perl", "powershell", "python", "lua", "ruby", "php",
 
       -- Web development
       "javascript", "typescript", "tsx", "vue", "html", "css", "scss", 
-      "sass", "json", "yaml", "graphql", "markdown", "markdown_inline",
-      "go", "gomod", "goctl",
+      "json", "yaml", "graphql", "markdown", "markdown_inline",
+      "go", 
 
       -- DevOps and infrastructure
       "dockerfile", "hcl", "nix", "toml", "make", "sql",
 
       -- Miscellaneous
       "c", "cpp", "java", "kotlin", "swift", "dart", "elixir",
-      "latex", "xml", "org", "rst", "glsl", "gdscript", "shaderlab",
+      "latex", "xml", "org", "rst", "glsl", "gdscript",
 
       -- Core and query support
       "vim", "vimdoc", "query"
     },
-    highlight = {
-      enable = true, -- Enable syntax highlighting
-    },
-    indent = {
-      enable = true, -- Enable indentation
-    },
-    auto_install = true, -- Automatically install missing parsers
-  },
-}
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },  
+        })
+    end
+ }
