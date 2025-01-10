@@ -14,7 +14,7 @@ return {
             "coc-sh",
             "coc-prettier",
             "coc-eslint",
-            "coc-vetur",       -- Vue.js support
+            "@yaegassy/coc-volar",       -- Vue.js support
             "coc-react-refactor", -- React refactoring tools
             "coc-go",          -- Go language server
             "coc-rust-analyzer" -- Rust language server

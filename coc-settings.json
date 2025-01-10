@@ -6,11 +6,14 @@
       "filetypes": ["go"],
       "initializationOptions": {
         "usePlaceholders": true
-      },
-      "gopls": {
-        "semanticTokens": false
       }
     }
   },
-  "html.filetypes": ["html", "handlebars", "htmldjango", "blade", "vue"]
+  "html.filetypes": ["html", "handlebars", "htmldjango", "blade", "vue"],
+  "diagnostic.enable": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextAlign": "below",
+  "diagnostic.virtualTextPrefix": "└────▶",
+    "diagnostic.virtualTextLimitInOneLine": 1
 }
