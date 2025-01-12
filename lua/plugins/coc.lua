@@ -14,10 +14,10 @@ return {
             "coc-sh",
             "coc-prettier",
             "coc-eslint",
-            "@yaegassy/coc-volar",       -- Vue.js support
-            "coc-react-refactor", -- React refactoring tools
-            "coc-go",          -- Go language server
-            "coc-rust-analyzer" -- Rust language server
+            "@yaegassy/coc-volar", -- Vue.js support
+            "coc-react-refactor",  -- React refactoring tools
+            "coc-go",              -- Go language server
+            "coc-rust-analyzer"    -- Rust language server
         }
 
         -- Example key mappings for Coc
@@ -64,4 +64,3 @@ return {
         keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
     end
 }
-
