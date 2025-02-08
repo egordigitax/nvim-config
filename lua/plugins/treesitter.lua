@@ -18,8 +18,8 @@ return {
                 "dockerfile", "hcl", "nix", "toml", "make", "sql",
 
                 -- Miscellaneous
-                "c", "cpp", "java", "kotlin", "swift", "dart", "elixir",
-                "latex", "xml", "org", "rst", "glsl", "gdscript",
+                "c", "cpp", "java", "kotlin", "dart", "elixir",
+                "xml", "org", "rst", "glsl", "gdscript",
 
                 -- Core and query support
                 "vim", "vimdoc", "query"
