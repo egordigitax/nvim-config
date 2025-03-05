@@ -1,10 +1,20 @@
 -- 08.01.2025
 -- NVIM CONFIG
 
+
+local opts = { buffer = bufnr, noremap = true, silent = true }
+
+
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+vim.keymap.set("n", "gb", "<C-t>", opts)                         -- Go back
+vim.keymap.set("n", "<Space>r", vim.lsp.buf.rename, opts)        -- Refactoring
+vim.keymap.set("n", "<Space>a", vim.lsp.buf.code_action, opts)   -- Code actions
+vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+vim.keymap.set("n", "ff", vim.lsp.buf.format, opts)
+
 -- Keybinds
 vim.keymap.set("n", "fi", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "fo", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true })
-vim.keymap.set("n", "ff", ":call CocActionAsync('format')<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "fl", "<cmd>Oil<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "tm", ":Themery<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tm", ":Telescope colorscheme<CR>", { noremap = true, silent = true })
@@ -22,16 +32,11 @@ vim.keymap.set("n", "gg", "<cmd>ChatGPT<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "ge", "<cmd>ChatGPTEditWithInstruction<CR>", { noremap = true, silent = true })
 
 -- Coc Binds
-vim.keymap.set("n", "gd", "<Plug>(coc-definition)", { silent = true })
-vim.keymap.set("n", "gr", "<Plug>(coc-references)", { silent = true })
-vim.keymap.set("n", "<leader>a", "<Plug>(coc-codeaction-cursor)", { silent = true })
-vim.keymap.set("n", "<leader>i", "<Plug>(coc-implementation)", { silent = true })
-vim.keymap.set("n", "<leader>r", "<Plug>(coc-refactor)", { silent = true })
-
+--
+--
 -- Unbind Comment Block
 vim.api.nvim_del_keymap('n', 'gbc')
 -- Bind Go Back to gb
-vim.api.nvim_set_keymap('n', 'gb', '<C-o>', { noremap = true, silent = true })
 
 -- Set tab width and use spaces instead of tabs
 vim.opt.tabstop = 4      -- Number of spaces that a tab represents
