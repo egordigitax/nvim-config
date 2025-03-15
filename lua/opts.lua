@@ -8,7 +8,7 @@ local opts = { buffer = bufnr, noremap = true, silent = true }
 vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-vim.keymap.set("n", "gb", "<C-t>", opts)                       -- Go back
+vim.keymap.set("n", "gb", "<C-o>", opts)                       -- Go back
 vim.keymap.set("n", "<Space>r", vim.lsp.buf.rename, opts)      -- Refactoring
 vim.keymap.set("n", "<Space>a", vim.lsp.buf.code_action, opts) -- Code actions
 vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
