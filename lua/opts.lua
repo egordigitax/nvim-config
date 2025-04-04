@@ -2,6 +2,14 @@
 -- NVIM CONFIG
 --
 
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
+
 vim.opt.termguicolors = true
 
 local opts = { buffer = bufnr, noremap = true, silent = true }
@@ -13,6 +21,9 @@ vim.keymap.set("n", "<Space>r", vim.lsp.buf.rename, opts)      -- Refactoring
 vim.keymap.set("n", "<Space>a", vim.lsp.buf.code_action, opts) -- Code actions
 vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 vim.keymap.set("n", "ff", vim.lsp.buf.format, opts)
+vim.keymap.set('n', 'Ff', function()
+    vim.cmd('!make format')
+end, { noremap = true, silent = false })
 
 -- Keybinds
 vim.keymap.set("n", "fi", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
