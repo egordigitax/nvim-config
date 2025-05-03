@@ -19,6 +19,7 @@ vim.api.nvim_set_keymap('n', 'ff', '<Plug>(coc-format)', {})
 vim.api.nvim_set_keymap('n', 'Ff', ':!make format<CR>', { noremap = true, silent = false })
 
 vim.keymap.set('n', 'K', ":call CocAction('doHover')<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', 'lg', ":LazyGit<CR>", { noremap = true, silent = true })
 
 -- Keybinds
 vim.keymap.set("n", "fi", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
@@ -27,7 +28,7 @@ vim.keymap.set("n", "fl", "<cmd>Oil<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "tm", ":Themery<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tm", ":Telescope colorscheme<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "ca", ":ToggleTerm<CR>", { noremap = true, silent = true })
-vim.keymap.set("t", "<ESC>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
+vim.keymap.set("t", "<leader><ESC>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>d", "<cmd>Neotree toggle<CR>", { noremap = true, silent = true })
 
 -- Panels switch
